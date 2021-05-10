@@ -41,6 +41,8 @@ namespace HashidsNet
         public Hashids() : this(string.Empty, 0, DEFAULT_ALPHABET, DEFAULT_SEPS)
         {
             // empty constructor with defaults needed to allow mocking of public methods
+			var x = DEFAULT_ALPHABET;
+			Console.WriteLine(x);
         }
 
         /// <summary>

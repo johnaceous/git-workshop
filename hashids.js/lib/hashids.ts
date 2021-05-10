@@ -17,17 +17,17 @@ export default class Hashids {
   ) {
     if (typeof minLength !== 'number') {
       throw new TypeError(
-        `Hashids: Provided 'minLength' has to be a number (is ${typeof minLength})`,
+        `Hashids: Provided 'minLength' must be a number (is ${typeof minLength})`,
       )
     }
     if (typeof salt !== 'string') {
       throw new TypeError(
-        `Hashids: Provided 'salt' has to be a string (is ${typeof salt})`,
+        `Hashids: Provided 'salt' must be a string (is ${typeof salt})`,
       )
     }
     if (typeof alphabet !== 'string') {
       throw new TypeError(
-        `Hashids: Provided alphabet has to be a string (is ${typeof alphabet})`,
+        `Hashids: Provided alphabet must be a string (is ${typeof alphabet})`,
       )
     }
 
