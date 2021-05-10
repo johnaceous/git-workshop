@@ -36,14 +36,6 @@ namespace HashidsNet
         private static readonly Lazy<Regex> hexSplitter = new(() => new Regex(@"[\w\W]{1,12}", RegexOptions.Compiled));
 
         /// <summary>
-        /// Instantiates a new Hashids encoder/decoder with defaults.
-        /// </summary>
-        public Hashids() : this(string.Empty, 0, DEFAULT_ALPHABET, DEFAULT_SEPS)
-        {
-            // empty constructor with defaults needed to allow mocking of public methods
-        }
-
-        /// <summary>
         /// Instantiates a new Hashids encoder/decoder.
         /// All parameters are optional and will use defaults unless otherwise specified.
         /// </summary>

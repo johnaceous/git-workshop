@@ -15,21 +15,6 @@ export default class Hashids {
     alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890',
     seps = 'cfhistuCFHISTU',
   ) {
-    if (typeof minLength !== 'number') {
-      throw new TypeError(
-        `Hashids: Provided 'minLength' has to be a number (is ${typeof minLength})`,
-      )
-    }
-    if (typeof salt !== 'string') {
-      throw new TypeError(
-        `Hashids: Provided 'salt' has to be a string (is ${typeof salt})`,
-      )
-    }
-    if (typeof alphabet !== 'string') {
-      throw new TypeError(
-        `Hashids: Provided alphabet has to be a string (is ${typeof alphabet})`,
-      )
-    }
 
     const saltChars = Array.from(salt)
     const alphabetChars = Array.from(alphabet)

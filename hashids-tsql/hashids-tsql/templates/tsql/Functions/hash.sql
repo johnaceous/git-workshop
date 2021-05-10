@@ -8,9 +8,6 @@ WITH SCHEMABINDING
 AS
 BEGIN
 	DECLARE
-		@hash nvarchar(255) = N'',
-		@alphabetLength int = LEN(@alphabet),
-		@pos int;
 
 	WHILE 1 = 1 BEGIN
 		SET @pos = @input % @alphabetLength;
