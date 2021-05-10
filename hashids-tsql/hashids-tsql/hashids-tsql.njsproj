@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>hashids-tsql</Name>
+    <RootNamespace>hashids-tsql</RootNamespace>
+    <ScriptArguments>-t test.sql</ScriptArguments>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>b2b57ebe-5df5-45e3-a191-8381bbaded22</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>app.js</StartupFile>
+    <StartWebBrowser>False</StartWebBrowser>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <ProjectView>ShowAllFiles</ProjectView>
+    <StartWebBrowser>False</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="app.js" />
+    <Content Include="bin\hashids-tsql" />
+    <Content Include="hashids-tsql.cmd" />
+    <Content Include="package.json" />
+    <Content Include="readme.md" />
+    <Content Include="templates\tsql\db.sql" />
+    <Content Include="templates\tsql\Functions\consistentShuffle.sql" />
+    <Content Include="templates\tsql\Functions\consistentShuffleA.sql" />
+    <Content Include="templates\tsql\Functions\encode1.sql" />
+    <Content Include="templates\tsql\Functions\encode1A.sql" />
+    <Content Include="templates\tsql\Functions\encode1B.sql" />
+    <Content Include="templates\tsql\Functions\encode1BA.sql" />
+    <Content Include="templates\tsql\Functions\encode2.sql" />
+    <Content Include="templates\tsql\Functions\encode2A.sql" />
+    <Content Include="templates\tsql\Functions\encode2B.sql" />
+    <Content Include="templates\tsql\Functions\encode2BA.sql" />
+    <Content Include="templates\tsql\Functions\encodeList.sql" />
+    <Content Include="templates\tsql\Functions\encodeListA.sql" />
+    <Content Include="templates\tsql\Functions\encodeListB.sql" />
+    <Content Include="templates\tsql\Functions\encodeListBA.sql" />
+    <Content Include="templates\tsql\Functions\encodeSplit.sql" />
+    <Content Include="templates\tsql\Functions\encodeSplitA.sql" />
+    <Content Include="templates\tsql\Functions\hash.sql" />
+    <Content Include="templates\tsql\Functions\hashA.sql" />
+    <Content Include="templates\tsql\go.sql" />
+    <Content Include="templates\No-UTF8-BOM-in-templates.txt" />
+    <Content Include="templates\tsql\test.sql" />
+    <Content Include="templates\tsql\schema.sql" />
+    <Content Include="templates\tsql\Stored Procedures\getComputedTestDuplicateCounts.sql" />
+    <Content Include="templates\tsql\Stored Procedures\listComputedTestDuplicates.sql" />
+    <Content Include="templates\tsql\Stored Procedures\seedComputedTestTable.sql" />
+    <Content Include="templates\tsql\Stored Procedures\seedNumberTable.sql" />
+    <Content Include="templates\tsql\Stored Procedures\testComputedHashDuplicates.sql" />
+    <Content Include="templates\tsql\Tables\ComputedTest.sql" />
+    <Content Include="templates\tsql\Tables\Number.sql" />
+    <Content Include="templates\tsql\User Defined Types\ListOfBigint.sql" />
+    <Content Include="templates\tsql\User Defined Types\ListOfInt.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+    <Folder Include="templates\" />
+    <Folder Include="templates\tsql\" />
+    <Folder Include="templates\tsql\Functions\" />
+    <Folder Include="templates\tsql\Stored Procedures\" />
+    <Folder Include="templates\tsql\Tables\" />
+    <Folder Include="templates\tsql\User Defined Types\" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+</Project>
